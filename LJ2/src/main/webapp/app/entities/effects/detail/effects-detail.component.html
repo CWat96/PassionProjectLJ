@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (effects) {
+      <div>
+        <h2 data-cy="effectsDetailsHeading"><span jhiTranslate="lj2App.effects.detail.title">Effects</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ effects.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="lj2App.effects.effect">Effect</span></dt>
+          <dd>
+            <span>{{ effects.effect }}</span>
+          </dd>
+          <dt><span jhiTranslate="lj2App.effects.platingMaterial">Plating Material</span></dt>
+          <dd>
+            @if (effects.platingMaterial) {
+              <div>
+                <a [routerLink]="['/plating-material', effects.platingMaterial.id, 'view']">{{ effects.platingMaterial.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="lj2App.effects.stoneGem">Stone Gem</span></dt>
+          <dd>
+            @if (effects.stoneGem) {
+              <div>
+                <a [routerLink]="['/stone-gem', effects.stoneGem.id, 'view']">{{ effects.stoneGem.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/effects', effects.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+
+entity PlatingMaterial {
+	platingName String
+}
+
+entity StoneGem {
+	stoneGemName String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Effects {
+	effect String
+}
+
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+
+
+relationship OneToMany {
+	PlatingMaterial{effects} to Effects
+}
+
+relationship OneToMany {
+	StoneGem{effects} to Effects
+}
+
+

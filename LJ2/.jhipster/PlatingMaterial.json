@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20231222215649"
+  },
+  "applications": "*",
+  "entityTableName": "plating_material",
+  "fields": [
+    {
+      "fieldName": "platingName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "PlatingMaterial",
+  "relationships": [
+    {
+      "otherEntityName": "effects",
+      "relationshipName": "effects",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

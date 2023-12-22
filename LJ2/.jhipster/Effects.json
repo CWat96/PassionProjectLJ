@@ -1,0 +1,17 @@
+{
+  "annotations": {
+    "changelogDate": "20231222215849"
+  },
+  "applications": "*",
+  "documentation": "not an ignored comment",
+  "entityTableName": "effects",
+  "fields": [
+    {
+      "fieldName": "effect",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Effects",
+  "relationships": [],
+  "searchEngine": "no"
+}

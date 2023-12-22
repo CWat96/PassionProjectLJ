@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20231222215749"
+  },
+  "applications": "*",
+  "entityTableName": "stone_gem",
+  "fields": [
+    {
+      "fieldName": "stoneGemName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "StoneGem",
+  "relationships": [
+    {
+      "otherEntityName": "effects",
+      "relationshipName": "effects",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}
