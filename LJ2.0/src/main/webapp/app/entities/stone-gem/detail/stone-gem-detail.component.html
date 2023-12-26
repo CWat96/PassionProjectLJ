@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (stoneGem) {
+      <div>
+        <h2 data-cy="stoneGemDetailsHeading"><span>Stone Gem</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ stoneGem.id }}</span>
+          </dd>
+          <dt><span>Stone Gem Name</span></dt>
+          <dd>
+            <span>{{ stoneGem.stoneGemName }}</span>
+          </dd>
+          <dt><span>Effects</span></dt>
+          <dd>
+            @for (effects of stoneGem.effects; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/effects', effects.id, 'view']">{{ effects.id }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/stone-gem', stoneGem.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

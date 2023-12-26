@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (effects) {
+      <div>
+        <h2 data-cy="effectsDetailsHeading"><span>Effects</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ effects.id }}</span>
+          </dd>
+          <dt><span>Effect</span></dt>
+          <dd>
+            <span>{{ effects.effect }}</span>
+          </dd>
+          <dt><span>Effects</span></dt>
+          <dd>
+            @for (effects of effects.effects; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/material-side-effects', effects.id, 'view']">{{ effects.id }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/effects', effects.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity PlatingMaterial.
+    -->
+    <changeSet id="20231226233208-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="plating_material_id"
+                                 baseTableName="rel_plating_material__effects"
+                                 constraintName="fk_rel_plating_material__effects__plating_material_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plating_material"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="effects_id"
+                                 baseTableName="rel_plating_material__effects"
+                                 constraintName="fk_rel_plating_material__effects__effects_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="effects"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="plating_material_id"
+                                 baseTableName="rel_plating_material__materialsideeffects"
+                                 constraintName="fk_rel_plating_material__materi__plating_material_e6_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plating_material"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="materialsideeffects_id"
+                                 baseTableName="rel_plating_material__materialsideeffects"
+                                 constraintName="fk_rel_plating_material__materi__materialsideeffects_a8_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="material_side_effects"
+                                 />
+    </changeSet>
+</databaseChangeLog>

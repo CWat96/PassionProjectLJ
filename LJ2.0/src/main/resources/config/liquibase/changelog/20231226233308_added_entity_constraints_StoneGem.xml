@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity StoneGem.
+    -->
+    <changeSet id="20231226233308-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="stone_gem_id"
+                                 baseTableName="rel_stone_gem__effects"
+                                 constraintName="fk_rel_stone_gem__effects__stone_gem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="stone_gem"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="effects_id"
+                                 baseTableName="rel_stone_gem__effects"
+                                 constraintName="fk_rel_stone_gem__effects__effects_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="effects"
+                                 />
+    </changeSet>
+</databaseChangeLog>
