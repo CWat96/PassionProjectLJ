@@ -1,0 +1,26 @@
+{
+  "labeledJewelryApp": {
+    "platingMaterial": {
+      "home": {
+        "title": "Plating Materials",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Plating Material",
+        "createOrEditLabel": "Create or edit a Plating Material",
+        "notFound": "No Plating Materials found"
+      },
+      "created": "A new Plating Material is created with identifier {{ param }}",
+      "updated": "A Plating Material is updated with identifier {{ param }}",
+      "deleted": "A Plating Material is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Plating Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Plating Material"
+      },
+      "id": "ID",
+      "platingName": "Plating Name",
+      "effects": "Effects",
+      "materialsideeffects": "Materialsideeffects"
+    }
+  }
+}

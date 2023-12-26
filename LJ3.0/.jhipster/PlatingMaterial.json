@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20231226234432"
+  },
+  "applications": "*",
+  "entityTableName": "plating_material",
+  "fields": [
+    {
+      "fieldName": "platingName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "PlatingMaterial",
+  "relationships": [
+    {
+      "otherEntityName": "effects",
+      "relationshipName": "effects",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "materialSideEffects",
+      "relationshipName": "materialsideeffects",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

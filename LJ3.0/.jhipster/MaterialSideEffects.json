@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20231226234732"
+  },
+  "applications": "*",
+  "entityTableName": "material_side_effects",
+  "fields": [
+    {
+      "fieldName": "materialSideEffectsName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "MaterialSideEffects",
+  "relationships": [],
+  "searchEngine": "no"
+}

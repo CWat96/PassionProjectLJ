@@ -1,0 +1,27 @@
+{
+  "labeledJewelryApp": {
+    "effects": {
+      "home": {
+        "title": "Effects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Effects",
+        "createOrEditLabel": "Create or edit a Effects",
+        "notFound": "No Effects found"
+      },
+      "created": "A new Effects is created with identifier {{ param }}",
+      "updated": "A Effects is updated with identifier {{ param }}",
+      "deleted": "A Effects is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Effects {{ id }}?"
+      },
+      "detail": {
+        "title": "Effects"
+      },
+      "id": "ID",
+      "effect": "Effect",
+      "effects": "Effects",
+      "platingMaterial": "Plating Material",
+      "stoneGem": "Stone Gem"
+    }
+  }
+}
