@@ -1,4 +1,4 @@
-Passion Project: Labeled Jewelry 
+<b>Passion Project: Labeled Jewelry</b>
 
 Labeled Jewelry is a mobile app / website that assists you with maintaining your jewelry and helping you figure out what jewelry is suitable for your skin type. Many of you may already have jewelry but often find yourself asking “how do I properly clean this? .. soap and warm water? solution cleaner? Do I take it to the jeweler?” With this app you will be able to select the mineral, crystals, or metals you have and a list of how to maintain each piece in your collection will be available. Also, for those who don’t purchase high end jewelry, I understand that the metals used can often fade or even turn our skin a different color! The Labeled Jewelry app will assist with letting you know if the specific metal you’re purchasing will cause any complications or deteriorate over time!
 
