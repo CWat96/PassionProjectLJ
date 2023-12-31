@@ -1,16 +1,17 @@
 package com.example.project;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Effects {
+    @ManyToMany(cascade = CascadeType.ALL)
+    private PlatingMaterial platingMaterial;
     @Id
     @GeneratedValue
 
     private Long id;
     private String effectsName;
+
 
     public Effects() {
     }
