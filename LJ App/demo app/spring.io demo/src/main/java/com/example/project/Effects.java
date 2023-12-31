@@ -2,15 +2,25 @@ package com.example.project;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
+
 @Entity
 public class Effects {
-    @ManyToMany(cascade = CascadeType.ALL)
-    private PlatingMaterial platingMaterial;
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private String effectsName;
+
+    @ManyToMany(mappedBy = "effects")
+    private Set<PlatingMaterial> platingMaterials;
+    // created relationship
+
+    @ManyToMany(mappedBy = "effects")
+    private Set<StoneGem> stoneGems;
+
 
 
     public Effects() {

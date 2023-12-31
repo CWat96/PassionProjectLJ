@@ -1,16 +1,26 @@
 package com.example.project;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
+
 
 @Entity
 public class StoneGem {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private String stoneGemName;
+
+    @ManyToMany
+    @JoinTable(
+            name = "stone_gem_effects",
+            joinColumns = @JoinColumn(name = "stone_gem_id"),
+            inverseJoinColumns = @JoinColumn(name = "effects_id")
+    )
+    private Set<Effects> effects;
+    // created relationship
 
     public StoneGem() {
     }
