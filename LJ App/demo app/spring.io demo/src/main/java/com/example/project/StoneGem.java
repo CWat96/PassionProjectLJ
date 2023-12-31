@@ -2,7 +2,7 @@ package com.example.project;
 
 import jakarta.persistence.*;
 
-import java.util.Set;
+import java.util.List;
 
 
 @Entity
@@ -19,7 +19,9 @@ public class StoneGem {
             joinColumns = @JoinColumn(name = "stone_gem_id"),
             inverseJoinColumns = @JoinColumn(name = "effects_id")
     )
-    private Set<Effects> effects;
+    private List<Effects> effects;
+
+
     // created relationship
 
     public StoneGem() {
