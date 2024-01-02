@@ -17,29 +17,29 @@ public class EffectsController {
         this.service = service;
     }
 
-    @PostMapping(value = "/create")
+    @PostMapping(value = "/createEffects")
     public ResponseEntity<Effects> create(@RequestBody Effects effects) {
         return new ResponseEntity<>(service.create(effects), HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/read/{id}")
+    @GetMapping(value = "/readEffects/{id}")
     public ResponseEntity<Effects> readById(@PathVariable Long id) {
         return new ResponseEntity<>(service.readById(id), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/readAll")
+    @GetMapping(value = "/readAllEffects")
     public ResponseEntity<List<Effects>> readAll() {
         return new ResponseEntity<>(service.readAll(), HttpStatus.OK);
     }
 
-    @PutMapping(value = "/update/{id}")
+    @PutMapping(value = "/updateEffects/{id}")
     public ResponseEntity<Effects> updateById(
             @PathVariable Long id,
             @RequestBody Effects newData) {
         return new ResponseEntity<>(service.update(id, newData), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/deleteEffects/{id}")
     public ResponseEntity<Effects> deleteById(@PathVariable Long id) {
         return new ResponseEntity<>(service.deleteById(id), HttpStatus.OK);
     }
