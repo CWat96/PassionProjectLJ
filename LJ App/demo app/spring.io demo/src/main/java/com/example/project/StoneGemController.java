@@ -10,6 +10,7 @@ import java.util.List;
 
 @Controller //handles incoming request from an outgoing response to client
 // provides necessary endpoints to access and manipulate respective domain objects
+@RequestMapping(value = "/Stone")
 public class StoneGemController {
     private StoneGemService service;
 
