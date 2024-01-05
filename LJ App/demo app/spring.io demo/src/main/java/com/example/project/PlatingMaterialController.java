@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping()
+@RequestMapping(value = "/platingMaterial")
 public class PlatingMaterialController {
     private PlatingMaterialService service;
 
@@ -19,29 +19,29 @@ public class PlatingMaterialController {
         this.service = service;
     }
 
-    @PostMapping(value = "/createPlating")
+    @PostMapping(value = "/create")
     public ResponseEntity<PlatingMaterial> create(@Validated @RequestBody PlatingMaterial platingMaterial) {
         return new ResponseEntity<>(service.create(platingMaterial), HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/readPlating/{id}")
+    @GetMapping(value = "/read/{id}")
     public ResponseEntity<PlatingMaterial> readById(@PathVariable Long id) {
         return new ResponseEntity<>(service.readById(id), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/readAllPlating")
+    @GetMapping(value = "/readAll")
     public ResponseEntity<List<PlatingMaterial>> readAll() {
         return new ResponseEntity<>(service.readAll(), HttpStatus.OK);
     }
 
-    @PutMapping(value = "/updatePlating/{id}")
+    @PutMapping(value = "/update/{id}")
     public ResponseEntity<PlatingMaterial> updateById(
             @PathVariable Long id,
             @RequestBody PlatingMaterial newData) {
         return new ResponseEntity<>(service.update(id, newData), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/deletePlating/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<PlatingMaterial> deleteById(@PathVariable Long id) {
         return new ResponseEntity<>(service.deleteById(id), HttpStatus.OK);
     }
