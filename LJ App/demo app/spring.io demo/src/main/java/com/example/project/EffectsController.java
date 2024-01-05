@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@RequestMapping(value = "/effects")
 public class EffectsController {
     private EffectsService service;
 
@@ -17,29 +18,29 @@ public class EffectsController {
         this.service = service;
     }
 
-    @PostMapping(value = "/createEffects")
+    @PostMapping(value = "/create")
     public ResponseEntity<Effects> create(@RequestBody Effects effects) {
         return new ResponseEntity<>(service.create(effects), HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/readEffects/{id}")
+    @GetMapping(value = "/read/{id}")
     public ResponseEntity<Effects> readById(@PathVariable Long id) {
         return new ResponseEntity<>(service.readById(id), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/readAllEffects")
+    @GetMapping(value = "/readAll")
     public ResponseEntity<List<Effects>> readAll() {
         return new ResponseEntity<>(service.readAll(), HttpStatus.OK);
     }
 
-    @PutMapping(value = "/updateEffects/{id}")
+    @PutMapping(value = "/update/{id}")
     public ResponseEntity<Effects> updateById(
             @PathVariable Long id,
             @RequestBody Effects newData) {
         return new ResponseEntity<>(service.update(id, newData), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/deleteEffects/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Effects> deleteById(@PathVariable Long id) {
         return new ResponseEntity<>(service.deleteById(id), HttpStatus.OK);
     }
