@@ -1,5 +1,7 @@
-package com.example.project;
+package com.example.project.config;
 
+import com.example.project.domain.PlatingMaterial;
+import com.example.project.repository.PlatingMaterialRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

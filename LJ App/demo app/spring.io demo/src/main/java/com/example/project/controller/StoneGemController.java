@@ -1,5 +1,7 @@
-package com.example.project;
+package com.example.project.controller;
 
+import com.example.project.domain.StoneGem;
+import com.example.project.service.StoneGemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
