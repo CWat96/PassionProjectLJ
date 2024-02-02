@@ -5,45 +5,49 @@ import com.example.project.service.EffectsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value = "/effects")
 public class EffectsController {
-    private EffectsService service;
+    private final EffectsService effectsService;
 
     @Autowired
-    public EffectsController(EffectsService service) {
-        this.service = service;
+    public EffectsController(EffectsService effectsService) {
+        this.effectsService = effectsService;
     }
 
+    // Endpoints for Effects CRUD operations
     @PostMapping(value = "/create")
-    public ResponseEntity<Effects> create(@RequestBody Effects effects) {
-        return new ResponseEntity<>(service.create(effects), HttpStatus.CREATED);
+    public ResponseEntity<Effects> createEffects(@RequestBody Effects effects) {
+        Effects createEffects = effectsService.create(effects);
+        return new ResponseEntity<>(createEffects, HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/read/{id}")
-    public ResponseEntity<Effects> readById(@PathVariable Long id) {
-        return new ResponseEntity<>(service.readById(id), HttpStatus.OK);
+    @GetMapping("/{id}")
+    public ResponseEntity<Effects> getEffectsById(@PathVariable("id") Long id) {
+        Effects effects = effectsService.readById(id);
+        return new ResponseEntity<>(effects, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/readAll")
-    public ResponseEntity<List<Effects>> readAll() {
-        return new ResponseEntity<>(service.readAll(), HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity<List<Effects>> getAllEffects() {
+        List<Effects> effectsList = effectsService.readAll();
+        return new ResponseEntity<>(effectsList, HttpStatus.OK);
     }
 
-    @PutMapping(value = "/update/{id}")
-    public ResponseEntity<Effects> updateById(
-            @PathVariable Long id,
-            @RequestBody Effects newData) {
-        return new ResponseEntity<>(service.update(id, newData), HttpStatus.OK);
+    @PutMapping("/{id}")
+    public ResponseEntity<Effects> updateEffects(@PathVariable("id") Long id, @RequestBody Effects newEffectsData) {
+        Effects updatedEffects = effectsService.update(id, newEffectsData);
+        return new ResponseEntity<>(updatedEffects, HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/delete/{id}")
-    public ResponseEntity<Effects> deleteById(@PathVariable Long id) {
-        return new ResponseEntity<>(service.deleteById(id), HttpStatus.OK);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Effects> deleteEffects(@PathVariable("id") Long id) {
+        Effects deletedEffects = effectsService.deleteById(id);
+        return new ResponseEntity<>(deletedEffects, HttpStatus.OK);
     }
+
 }
