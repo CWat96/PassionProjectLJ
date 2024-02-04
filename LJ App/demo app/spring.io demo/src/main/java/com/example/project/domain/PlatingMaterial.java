@@ -1,5 +1,6 @@
-package com.example.project;
+package com.example.project.domain;
 
+import com.example.project.domain.Effects;
 import jakarta.persistence.*;
 
 import java.util.Set;

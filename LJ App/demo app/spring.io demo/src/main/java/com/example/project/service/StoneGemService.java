@@ -1,5 +1,7 @@
-package com.example.project;
+package com.example.project.service;
 
+import com.example.project.domain.StoneGem;
+import com.example.project.repository.StoneGemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
