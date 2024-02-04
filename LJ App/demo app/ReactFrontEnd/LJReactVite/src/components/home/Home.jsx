@@ -1,5 +1,9 @@
 import React from "react";
 import "./home.css";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
 
 const Home = () => {
   return (
@@ -19,6 +23,27 @@ const Home = () => {
           Learn more
         </a>
       </div>
+      <Container>
+      <Row>
+        <Col xs={6} md={4}>
+          <Image src="https://passionprojectlj.s3.us-east-2.amazonaws.com/homeicon1.jpeg" rounded />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src="https://passionprojectlj.s3.us-east-2.amazonaws.com/homeicon2.jpeg" rounded />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src="https://passionprojectlj.s3.us-east-2.amazonaws.com/homeicon4.jpeg" rounded />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src="https://passionprojectlj.s3.us-east-2.amazonaws.com/homeicon5.jpeg" rounded />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src="https://passionprojectlj.s3.us-east-2.amazonaws.com/homeicon6.jpeg" rounded />
+        </Col>
+      </Row>
+    </Container>
+
+
     </div>
   );
 };
