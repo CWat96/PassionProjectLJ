@@ -41,4 +41,7 @@
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button">Submit</button>
+</div>
 </form>
