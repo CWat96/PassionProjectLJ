@@ -12,7 +12,9 @@ const Header = () => {
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#"></Navbar.Brand>
+        <Navbar.Brand href="#">
+        <i className="material-icons">arrow_back_ios</i> {/* Back arrow icon */}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
